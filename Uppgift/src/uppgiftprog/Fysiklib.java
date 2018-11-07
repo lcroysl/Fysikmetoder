@@ -109,48 +109,105 @@ public class Fysiklib {
 	}
 	/** 
 	 *  Metod som tar in ett fast ämne och volym och ger tillbaka massa
-	 * @param solid 
-	 * @param volume
-	 * @return
+	 * @param solid Skriv ett fast ämne
+	 * @param volume Skriv en volym i liter
+	 * @return Ger tillbaka massa i kilogram från volymet av ämnet
 	 */
 	public static double volumeToMass(Fysikformsolid solid, double volume) {
 		double volmass = solid.Density * volume;
 		return volmass;
 	}
+	/**
+	 *  Metod som tar in sträcka och tid och ger hastighet
+	 * @param distance Skriv en sträcka i meter
+	 * @param time Skriv tid i sekunder
+	 * @return Ger tillbaka hastighet i m/s
+	 */
 	public static double svtVelocity(double distance, double time) {
 		double speed = distance / time;
 		return speed;
 	}
+	/**
+	 *  Metod som tar in hastighet och tid och ger tillbaka sträcka 
+	 * @param velocity Skriv hastighet i m/s
+	 * @param time Skriv tid i sekunder
+	 * @return Ger tillbaka sträcka i meter
+	 */
 	public static double svtDistance(double velocity, double time) {
 		double stracka = velocity / time;
 		return stracka;
 	}
+	/**
+	 *  Metod som tar in sträcka och hastighet och ger tillbaka tid
+	 * @param distance Skriv sträcka i meter
+	 * @param velocity Skriv hastighet i m/s
+	 * @return Ger tillbaka tid i sekunder
+	 */
 	public static double svtTime(double distance, double velocity) {
 		double time = distance * velocity;
 		return time;
 	}
+	/**
+	 *  Metod som tar in kraft och sträcka och ger tillbaka arbete
+	 * @param force Skriv kraft i Newton
+	 * @param distance Skriv sträcka i meter
+	 * @return Ger tillbaka arbete i N/m
+	 */
 	public static double work(double force, double distance) {
 		double work = force * distance;
 		return work;
 	}
+	/**
+	 *  Metod som tar in arbete och tid och ger tillbaka effekt
+	 * @param work Skriv arbete i N/m
+	 * @param time Skriv tid i sekunder
+	 * @return Ger tillbaka effekt i Joule
+	 */
 	public static double power(double work, double time) {
 		double power = work / time;
 		return power;
 	}
+	/**
+	 *  Metod som tar ett fast ämne, massa och skillnad i temperatur och ger tillbaka energi
+	 * @param solid Skriv ett fast ämne (Järn, silver, is, kol , zink)
+	 * @param mass Skriv en massa i kilogram
+	 * @param deltaT Skriv skillnad i temperatur i celsius/kelvin
+	 * @return Ger tillbaka den krävda energi för att värma upp ämnet
+	 */
 	public static double heat(Fysikformsolid solid, double mass, double deltaT) {
 		double energy = solid.Heatcapacity * mass * deltaT;
 		return energy;
 	}
+	/**
+	 * Metod som tar in vätska, volym och skillnad i temperatur och ger tillbaka energi
+	 * @param fluid Skriv en vätska (Vatten, bensen, aceton, metanol, etanol)
+	 * @param volume Skriv en volym i liter
+	 * @param deltaT Skriv skillnad i temperatur i celsius/kelvin
+	 * @return Ger tillbaka krävd energi för att värma vätskan
+	 */
 	public static double heat(Fysikform fluid, double volume, double deltaT) {
 		double energy = fluid.Heatcapacity * volume * deltaT;
 		return energy;
 	}
+	/**
+	 *  Metod som tar in gas, volum och skillnad i temperatur och ger tillbaka energi
+	 * @param gas Skriv en gas (Luft, klor, koldioxid, syre, väte)
+	 * @param volume Skriv en volym i liter
+	 * @param deltaT Skriv skillnad i temperatur i celsius/kelvin
+	 * @return Ger tillbaka krävd energi för att värma gasen
+	 */
 	public static double heat(Fysikformgas gas, double volume, double deltaT) {
 		double energy = gas.Heatcapacity * volume * deltaT;
 		return energy;
 	}
+	/**
+	 *  Metod som tar in en hastighet och ger tillbaka höjd
+	 * @param velocity Skriv en hastighet i m/s
+	 * @return Ger tillbaka höjd i meter
+	 */
 	public static double velocityToHeight(double velocity) {
-		double height = 
+		double height = velocity / 2;
+		return height;
 	}
 
 
