@@ -8,7 +8,13 @@ public class Uppgifter {
 		q2();
 		q3();
 		q4();
-	}
+		q5();
+		q6();
+		q7();
+		q8();
+		q9();
+		q10();
+		}
 	public static void q1() {
 			double volym = 80;
 			String Jarn = "Jarn";
@@ -39,6 +45,20 @@ public class Uppgifter {
 		double work = (740 * 9.82 * 100) / tid;
 		System.out.println(Fysiklib.power(work, tid));
 	}
-	
+	public static void q7() {
+		
+	}
+	public static void q8() {
+		double kraft = 50 * 9.82;
+		double dist = 210 * 3;
+		System.out.println(Fysiklib.work(kraft, dist));
+	}
+	public static void q9() {
+		double deep = 327;
+		System.out.println(Fysiklib.waterpress(deep));
+	}
+	public static void q10() {
+		
+	}
 
 }

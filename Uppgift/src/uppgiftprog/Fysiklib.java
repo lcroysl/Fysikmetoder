@@ -1,7 +1,11 @@
 package uppgiftprog;
 
 public class Fysiklib {
-	public static double konstanter() {
+	public static void konstanter() {
+		double G = 9.8;
+		double R = 8.3144621;
+		double P_0 = 101300;
+		double c = 299792458;
 		
 	}
 	/**
