@@ -77,6 +77,81 @@ public class Fysiklib {
 		h = height / 9.82;
 		return h;
 	}
+	/** 
+	 *  Metod som tar in 2 tal och ger tillbaka skillnaden
+	 * @param first Skriv ett tal
+	 * @param last Skriv ett andra tal
+	 * @return Ger tillbaka skillnaden mellan angivna tal
+	 */
+	public static double delta(double first, double last) {
+		double delta = first - last;
+		return delta;
+	}
+	/** 
+	 *  Metod som tar in en volym och vätska och ger tillbaka massan
+	 * @param fluid Skriv en vätska
+	 * @param volume Skriv ett volym i liter
+	 * @return Ger tillbaka volymen på vätskan i kilogram
+	 */
+	public static double volumeToMass(Fysikform fluid, double volume) {
+		double volmass = fluid.Density * volume;
+		return volmass;
+	}
+	/**
+	 *  metod som tar in en gas och en volym och ger tillbaka massa
+	 * @param gas Skriv en gas
+	 * @param volume Skriv en volym i liter
+	 * @return Ger tillbaka massa av gasens volym
+	 */
+	public static double volumeToMass(Fysikformgas gas, double volume) {
+		double volmass = gas.Density * volume;
+		return volmass;
+	}
+	/** 
+	 *  Metod som tar in ett fast ämne och volym och ger tillbaka massa
+	 * @param solid 
+	 * @param volume
+	 * @return
+	 */
+	public static double volumeToMass(Fysikformsolid solid, double volume) {
+		double volmass = solid.Density * volume;
+		return volmass;
+	}
+	public static double svtVelocity(double distance, double time) {
+		double speed = distance / time;
+		return speed;
+	}
+	public static double svtDistance(double velocity, double time) {
+		double stracka = velocity / time;
+		return stracka;
+	}
+	public static double svtTime(double distance, double velocity) {
+		double time = distance * velocity;
+		return time;
+	}
+	public static double work(double force, double distance) {
+		double work = force * distance;
+		return work;
+	}
+	public static double power(double work, double time) {
+		double power = work / time;
+		return power;
+	}
+	public static double heat(Fysikformsolid solid, double mass, double deltaT) {
+		double energy = solid.Heatcapacity * mass * deltaT;
+		return energy;
+	}
+	public static double heat(Fysikform fluid, double volume, double deltaT) {
+		double energy = fluid.Heatcapacity * volume * deltaT;
+		return energy;
+	}
+	public static double heat(Fysikformgas gas, double volume, double deltaT) {
+		double energy = gas.Heatcapacity * volume * deltaT;
+		return energy;
+	}
+	public static double velocityToHeight(double velocity) {
+		double height = 
+	}
 
 
 }
