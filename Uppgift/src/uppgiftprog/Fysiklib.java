@@ -1,6 +1,9 @@
 package uppgiftprog;
 
 public class Fysiklib {
+	public static double konstanter() {
+		
+	}
 	/**
 	 *  Metod som tar in grader farhenheit och ger tillbaka det i grader celsius
 	 * @param f Skriv grader farhenheit i nummer
