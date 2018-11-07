@@ -95,7 +95,54 @@ public static void main(String[] args) {
 	}
 	public static void metod14() {
 		Scanner inp = new Scanner(System.in);
-		
+		double dist = inp.nextDouble();
+		double velo = inp.nextDouble();
+		System.out.println(Fysiklib.svtTime(dist, velo));
+	}
+	public static void metod15() {
+		Scanner inp = new Scanner(System.in);
+		double kraft = inp.nextDouble();
+		double dist = inp.nextDouble();
+		System.out.println(Fysiklib.work(kraft, dist));
+	}
+	public static void metod16() {
+		Scanner inp = new Scanner(System.in);
+		double work = inp.nextDouble();
+		double tid = inp.nextDouble();
+		System.out.println(Fysiklib.power(work, tid));
+	}
+	public static void metod17() {
+		Scanner inp = new Scanner(System.in);
+		double mass = inp.nextDouble();
+		double deltat = inp.nextDouble();
+		String solid = inp.nextLine();
+		String solid1 = solid.toLowerCase();
+		String solidren = solid1.substring(0,1).toUpperCase() + solid1.substring(1, solid1.length());
+		System.out.println(Fysiklib.heat(Fysikformsolid.valueOf(solidren), mass, deltat));
+	}
+	public static void metod18() {
+		Scanner inp = new Scanner(System.in);
+		double volume = inp.nextDouble();
+		double deltat = inp.nextDouble();
+		String vatska = inp.nextLine();
+		String vatska1 = vatska.toLowerCase();
+		String renvatska = vatska1.substring(0,1).toUpperCase() + vatska1.substring(1, vatska1.length());
+		System.out.println(Fysiklib.heat(Fysikform.valueOf(renvatska), volume, deltat));
+	}
+	public static void metod19() {
+		Scanner inp = new Scanner(System.in);
+		double volume = inp.nextDouble();
+		double deltat = inp.nextDouble();
+		String gas = inp.nextLine();
+		String gas1 = gas.toLowerCase();
+		String rengas = gas1.substring(0,1).toUpperCase() + gas1.substring(1, gas1.length());
+		System.out.println(Fysiklib.heat(Fysikformgas.valueOf(rengas), volume, deltat));
+				
+	}
+	public static void metod20() {
+		Scanner inp = new Scanner(System.in);
+		double velo = inp.nextDouble();
+		System.out.println(Fysiklib.velocityToHeight(velo));
 	}
 		
 	
